@@ -95,7 +95,7 @@ const Kata8heading = document.createElement('h3')
 Kata8heading.append(' Kata 8')
 parentelement.append(Kata8heading)
 
-for (let kata8counter = 1; kata8counter <= 20; kata8counter += 2) {
+for (let kata8counter = 19; kata8counter >= 1; kata8counter -= 2) {
     let kata8answer = kata8counter
     const kata8output = document.createElement('li')
     kata8output.append(kata8answer)
@@ -163,9 +163,9 @@ const kata13heading = document.createElement('h3')
 kata13heading.append('kata 13')
 parentelement.append(kata13heading)
 
-for (let kata13counter = 0; kata13counter < samplearray.length; kata13counter += 2) {
+for (let kata13counter = 0; kata13counter < samplearray.length; kata13counter += 1) {
     let kata13answer = samplearray[kata13counter]
-    {
+    if (kata13answer % 2 === 1) {
         const kata13output = document.createElement('li')
         kata13output.append(kata13answer)
         parentelement.append(kata13output)
@@ -187,32 +187,47 @@ for (let kata14counter = 0; kata14counter < samplearray.length; kata14counter +=
 }
 
 //Kata 15
-  const kata15heading= document.createElement ('h3')
-  kata15heading.append ('kata  15')
+const kata15heading = document.createElement('h3')
+kata15heading.append('kata  15')
 parentelement.append(kata15heading)
 let sum15 = 0
-for (let kata15counter = 0; kata15counter <= samplearray.length; kata15counter +=1) {
-    sum15 += kata15counter 
-    }
-    const kata15output =document.createElement ('li')
-    kata15output.append(sum15)
-    parentelement.append(kata15output)
-    
-    //Kata16 
-     const kata16heading =document.createElement (' h3')
-     kata16heading.append ('kata 16')
-      parentelement.append( kata16heading)
-    
-   
-       for ( let kata16counter =0; kata16counter <samplearray.length; kata16counter += 1) 
-       let min =samplearray  if (min<samplearray) {
-           
-       }
+for (let kata15counter = 0; kata15counter <= samplearray.length; kata15counter += 1) {
+    sum15 += kata15counter
+}
+const kata15output = document.createElement('li')
+kata15output.append(sum15)
+parentelement.append(kata15output)
 
-       }
-        
-       
-       const kata16output= document.createElement ('li')
-       kata16output.append(sum16)
-       parentelement.append(kata16output)
+//Kata16 
+const kata16heading = document.createElement('h3')
+kata16heading.append('kata 16')
+parentelement.append(kata16heading)
+
+let sum16 = 0
+for (let kata16counter = 0; kata16counter < samplearray.length; kata16counter += 1){
+    sum16 += samplearray[kata16counter]
+}
+const kata16output = document.createElement('li')
+kata16output.append(sum16)
+parentelement.append(kata16output)
+ 
+// Kata17
+ const kata17heading = document.createElement ('h3')
+ kata17heading.append('kata 17')
+ parentelement.append(kata17heading)
+
+ const kata17output =document.createElement ('li')
+
+ kata17output.append ( Math.min (...samplearray))
+ parentelement.append(kata17output)
+
+//  Kata18
+ const kata18heading =document.createElement ('h3')
+ kata18heading.append ('kata 18')
+ parentelement.append(kata18heading)
+ 
+ const kata18ouput =document.createElement ('li')
+
+ kata18ouput.append (Math.max (...samplearray))
+ parentelement.append(kata18ouput)
 
